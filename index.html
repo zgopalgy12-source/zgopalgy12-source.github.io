@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>VERIFY – A tua documentação em Portugal, sem complicações</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1747B8;--navy:#0E1A33;--sky:#EAF0FF;--coral:#FF6B4A;--gold:#FFC83D;--mint:#12B886;--mintbg:#DDF7EC;--amberbg:#FFF1CC;--amber:#946200;--redbg:#FFE3DC;--red:#C2371A;--mute:#5B6785;--line:#E3E8F5;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--navy);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:10px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:.05em;font-size:20px;cursor:pointer;color:var(--navy)}
+.nr{display:flex;align-items:center;gap:8px}
+.lk{background:none;border:0;font:600 14px inherit;color:var(--navy);cursor:pointer;padding:8px 10px;border-radius:10px}
+.lk:hover{background:var(--sky)}
+.lang button{background:#fff;border:1px solid var(--line);color:var(--navy);padding:6px 11px;border-radius:99px;font:700 12px inherit;cursor:pointer}
+.lang button.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.pat{background:radial-gradient(circle at 1px 1px,rgba(23,71,184,.13) 1.6px,transparent 0) 0 0/24px 24px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:44px 0 70px}
+.tag{display:inline-block;background:var(--sky);color:var(--blue);font-weight:700;font-size:13px;padding:6px 13px;border-radius:99px;margin-bottom:18px}
+h1{font-size:clamp(34px,5.4vw,56px);line-height:1.06;margin:0 0 18px;font-weight:800;letter-spacing:-.025em}
+.hl{background:linear-gradient(transparent 62%,var(--gold) 62%,var(--gold) 92%,transparent 92%)}
+.sub{font-size:18px;color:var(--mute);margin:0 0 26px;max-width:520px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--blue);color:#fff;border:0;padding:15px 24px;border-radius:13px;font:700 16px inherit;cursor:pointer;text-decoration:none}
+.btn:hover{background:#0F3A9E}
+.btn.o{background:#fff;color:var(--blue);border:2px solid var(--blue);padding:13px 22px}
+.btn.o:hover{background:var(--sky)}
+.btn.g{background:var(--gold);color:var(--navy)}.btn.g:hover{background:#FFD35E}
+.note{font-size:13px;color:var(--mute);margin-top:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 14px 36px rgba(23,71,184,.12)}
+.card h3{margin:0 0 3px;font-size:16px}.card .s{font-size:13px;color:var(--mute);margin-bottom:12px}
+.row{display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid var(--line);font-size:14px}
+.row b{flex:1;font-weight:600}
+.pill{font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px;white-space:nowrap}
+.ok{background:var(--mintbg);color:#0B7A57}.warn{background:var(--amberbg);color:var(--amber)}.bad{background:var(--redbg);color:var(--red)}
+section{padding:54px 0}
+h2{font-size:clamp(26px,3.6vw,36px);margin:0 0 10px;letter-spacing:-.015em;font-weight:800}
+.lead{color:var(--mute);margin:0 0 30px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.box .n{width:36px;height:36px;border-radius:11px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:12px}
+.box h3{margin:0 0 6px;font-size:18px}.box p{margin:0;color:var(--mute);font-size:15px}
+.tc{cursor:pointer;transition:.15s;text-align:left;font:inherit;color:inherit}
+.tc:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 10px 24px rgba(23,71,184,.12)}
+.tc .e{font-size:28px;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:var(--sky);padding:9px 16px;border-radius:99px;font-weight:600;font-size:14px}
+.band{background:linear-gradient(135deg,var(--blue),#0F2F7A);color:#fff;border-radius:24px;padding:42px 28px}
+.band h2{color:#fff}.band .lead{color:#CBD7F5}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer}.faq p{color:var(--mute);margin:10px 0 0;font-size:15px}
+footer{padding:30px 0 40px;color:var(--mute);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+.gh{background:var(--sky);padding:34px 0 26px}
+.gh h1{font-size:clamp(28px,4.5vw,42px);margin:0 0 8px}
+.back{background:none;border:0;color:var(--blue);font:700 14px inherit;cursor:pointer;padding:0;margin-bottom:12px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:16px 0 6px;scrollbar-width:thin}
+.tab{flex:0 0 auto;background:#fff;border:1px solid var(--line);color:var(--navy);padding:10px 15px;border-radius:99px;font:600 14px inherit;cursor:pointer;white-space:nowrap}
+.tab.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.tab.s{padding:7px 13px;font-size:13px}.tab.s.on{background:var(--navy);border-color:var(--navy)}
+.gc{padding:10px 0 20px;max-width:780px}
+.gc h2{margin-top:14px}.gc h3{font-size:17px;margin:24px 0 8px}
+.gc ul{list-style:none;padding:0;margin:0}
+.gc li{padding:11px 14px 11px 42px;background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;position:relative;font-size:15px}
+.gc li:before{content:"✓";position:absolute;left:13px;top:10px;width:22px;height:22px;border-radius:50%;background:var(--mintbg);color:#0B7A57;font-weight:800;font-size:13px;display:grid;place-items:center}
+.nt{background:var(--amberbg);border-radius:12px;padding:14px 16px;font-size:14px;margin:18px 0}
+.src{font-size:13px;color:var(--mute)}.src a{color:var(--blue);font-weight:600}
+.cta2{background:var(--sky);border-radius:16px;padding:20px;margin:26px 0;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cta2 b{font-size:16px}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:28px;padding-top:20px}.grid{grid-template-columns:1fr}.band{padding:30px 20px}.lk.h{display:none}}
+</style>
+</head>
+<body>
+<div class="w"><nav>
+<div class="logo" onclick="go('home')"><svg width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="10" fill="#1747B8"/><path d="M9 16.5l4.8 4.8L23 11.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24.5" cy="7.5" r="3" fill="#FFC83D"/></svg>VERIFY</div>
+<div class="nr"><button class="lk" onclick="go('guia')" data-i="nav"></button><span class="lang"><button id="bpt" onclick="setL('pt')">PT</button> <button id="ben" onclick="setL('en')">EN</button></span></div>
+</nav></div>
+
+<div id="home">
+<div class="pat"><div class="w"><div class="hero">
+ <div>
+  <span class="tag" data-i="tag"></span>
+  <h1 data-i="h1"></h1>
+  <p class="sub" data-i="sub"></p>
+  <div class="btns"><a class="btn" href="https://forms.gle/aFKGvUW4QWU3hkSq6" target="_blank" rel="noopener" data-i="cta"></a><button class="btn o" onclick="go('guia')" data-i="cta2"></button></div>
+  <p class="note" data-i="note"></p>
+ </div>
+ <div class="card"><h3 data-i="mt"></h3><div class="s" data-i="ms"></div>
+  <div class="row"><b data-i="d1"></b><span class="pill ok" data-i="s1"></span></div>
+  <div class="row"><b data-i="d2"></b><span class="pill ok" data-i="s1"></span></div>
+  <div class="row"><b data-i="d3"></b><span class="pill warn" data-i="s2"></span></div>
+  <div class="row"><b data-i="d4"></b><span class="pill bad" data-i="s3"></span></div>
+ </div>
+</div></div></div>
+<div class="w">
+<section><h2 data-i="gt"></h2><p class="lead" data-i="gl"></p><div class="grid" id="tg"></div></section>
+<section><h2 data-i="hw"></h2><p class="lead" data-i="hwl"></p>
+ <div class="grid">
+  <div class="box"><div class="n">1</div><h3 data-i="w1t"></h3><p data-i="w1"></p></div>
+  <div class="box"><div class="n">2</div><h3 data-i="w2t"></h3><p data-i="w2"></p></div>
+  <div class="box"><div class="n">3</div><h3 data-i="w3t"></h3><p data-i="w3"></p></div>
+ </div></section>
+<section><h2 data-i="fo"></h2><p class="lead" data-i="fol"></p>
+ <div class="chips"><span>🇨🇻 Cabo Verde</span><span>🇲🇿 Moçambique</span><span>🇬🇼 Guiné-Bissau</span><span>🇦🇴 Angola</span><span>🇧🇷 Brasil</span><span>🇮🇳 India</span><span>🇧🇩 Bangladesh</span><span>🇳🇵 Nepal</span></div></section>
+<section id="lista"><div class="band"><h2 data-i="wl"></h2><p class="lead" data-i="wll"></p>
+ <a class="btn g" href="https://forms.gle/aFKGvUW4QWU3hkSq6" target="_blank" rel="noopener" data-i="send"></a></div></section>
+<section class="faq"><h2 data-i="fq"></h2>
+ <details><summary data-i="q1"></summary><p data-i="a1"></p></details>
+ <details><summary data-i="q2"></summary><p data-i="a2"></p></details>
+ <details><summary data-i="q3"></summary><p data-i="a3"></p></details>
+ <details><summary data-i="q4"></summary><p data-i="a4"></p></details></section>
+</div></div>
+
+<div id="guia" hidden>
+<div class="gh"><div class="w"><button class="back" onclick="go('home')">← VERIFY</button>
+ <h1>Guia de documentos</h1>
+ <p class="sub" style="margin:0">Tudo o que precisas de reunir para tratar da tua vida em Portugal. Informação atualizada a outubro de 2026.</p></div></div>
+<div class="w"><div class="tabs" id="tt"></div><div class="tabs" id="st"></div><div class="gc" id="gc"></div></div>
+</div>
+
+<div class="w"><footer><span data-i="disc"></span><br>© 2026 VERIFY</footer></div>
+
+<script>
+var FORM="https://forms.gle/aFKGvUW4QWU3hkSq6";
+var D={
+pt:{nav:"Guia de documentos",tag:"Em breve · acesso antecipado",h1:"A tua documentação em Portugal, <span class=\"hl\">sem complicações.</span>",sub:"A VERIFY explica que documentos precisas, verifica o que falta nos teus papéis e avisa-te antes de os prazos chegarem.",cta:"Entrar na lista de espera",cta2:"Ver guia de documentos",note:"Gratuito para entrar. Sem compromisso.",
+mt:"O teu processo: Renovação",ms:"Exemplo do que a VERIFY mostra",d1:"Passaporte",d2:"Contrato de arrendamento",d3:"Seguro de saúde",d4:"Comprovativo de rendimentos",s1:"Válido",s2:"Caduca em 18 dias",s3:"Em falta",
+gt:"Guia de documentos",gl:"Escolhe o que precisas de tratar e vê a lista completa, passo a passo.",
+hw:"Como funciona",hwl:"Três passos simples.",w1t:"Escolhe o teu processo",w1:"Primeira residência, renovação ou reagrupamento familiar. Recebes a lista certa para o teu caso.",w2t:"Carrega os documentos",w2:"A IA lê as datas e mostra o que está válido, o que está a caducar e o que falta.",w3t:"Recebe alertas",w3:"Avisamos-te antes de um documento caducar ou de um prazo importante.",
+fo:"Feito para quem vive o processo",fol:"Para comunidades de língua portuguesa e para quem chega de outros países. Em breve também em hindi, bengali e nepalês.",
+wl:"Quero ser dos primeiros",wll:"Deixa o teu contacto no formulário e diz-nos de onde vens. Avisamos-te quando abrir o acesso antecipado.",send:"Quero acesso antecipado",
+fq:"Perguntas frequentes",q1:"A VERIFY é aconselhamento jurídico?",a1:"Não. A VERIFY organiza e verifica documentos e envia alertas. Não substitui um advogado nem garante a decisão da AIMA.",q2:"A VERIFY tem ligação à AIMA?",a2:"Não. Somos um serviço independente e não acedemos ao teu portal da AIMA.",q3:"Os meus documentos estão seguros?",a3:"São dados sensíveis. Vamos usar encriptação, servidores na UE e dar-te a opção de apagar tudo quando quiseres.",q4:"Quanto vai custar?",a4:"Ainda estamos a definir. Quem entrar na lista de espera será o primeiro a saber.",
+disc:"A VERIFY é uma ferramenta independente de organização de documentos. Não presta aconselhamento jurídico e não está ligada à AIMA nem ao Governo português."},
+en:{nav:"Document guide",tag:"Coming soon · early access",h1:"Your documents in Portugal, <span class=\"hl\">made simple.</span>",sub:"VERIFY explains which documents you need, checks what’s missing from your paperwork and reminds you before deadlines arrive.",cta:"Join the waitlist",cta2:"See document guide",note:"Free to join. No commitment.",
+mt:"Your case: Renewal",ms:"Example of what VERIFY shows",d1:"Passport",d2:"Rental contract",d3:"Health insurance",d4:"Proof of income",s1:"Valid",s2:"Expires in 18 days",s3:"Missing",
+gt:"Document guide",gl:"Pick what you need to sort out and see the full list, step by step. (Guide currently in Portuguese.)",
+hw:"How it works",hwl:"Three simple steps.",w1t:"Choose your process",w1:"First residence, renewal or family reunification. You get the right list for your case.",w2t:"Upload your documents",w2:"AI reads the dates and shows what’s valid, what’s expiring and what’s missing.",w3t:"Get reminders",w3:"We remind you before a document expires or an important deadline arrives.",
+fo:"Built for people going through the process",fol:"For Portuguese-speaking communities and people arriving from other countries. Hindi, Bengali and Nepali are coming soon.",
+wl:"I want to be among the first",wll:"Leave your details in the form and tell us where you’re from. We’ll let you know when early access opens.",send:"Get early access",
+fq:"Frequently asked questions",q1:"Is VERIFY legal advice?",a1:"No. VERIFY organises and checks documents and sends reminders. It doesn’t replace a lawyer or guarantee AIMA’s decision.",q2:"Is VERIFY connected to AIMA?",a2:"No. We’re an independent service and we don’t access your AIMA portal account.",q3:"Are my documents safe?",a3:"They’re sensitive data. We’ll use encryption, EU servers and let you delete everything whenever you like.",q4:"How much will it cost?",a4:"We’re still deciding. People on the waitlist will hear first.",
+disc:"VERIFY is an independent document-organising tool. It does not provide legal advice and is not affiliated with AIMA or the Portuguese government."}};
+
+var DG="https://www.deco.proteste.pt/familia-consumo/ferias-lazer/dicas/autorizacao-residencia-como-pedir";
+var GN="https://www.gov.pt/guias/como-pedir-o-nif-e-o-niss-para-pessoas-estrangeiras-em-portugal";
+var NOTE="Esta lista é geral. Conforme o tipo de visto ou de caso, a AIMA pode pedir outros documentos. Confirma sempre na fonte oficial antes de ires.";
+var G=[
+{id:"res",e:"🪪",t:"Autorização de residência",s:[
+ {t:"Pedido inicial",p:"Quem pede a autorização de residência (AR) pela primeira vez, normalmente com um visto de residência. A decisão tem um prazo legal de 90 dias, prorrogável por 30. A AR temporária vale 2 anos e pode ser renovada por períodos de 3 anos.",
+  b:[{h:"Documentos gerais",l:["Formulário da AIMA preenchido","Passaporte ou outro documento de viagem válido","Visto de residência válido","Comprovativo de meios de subsistência (por exemplo, contrato de trabalho)","Comprovativo de inscrição nas Finanças (NIF), quando aplicável","Comprovativo de inscrição na Segurança Social (NISS), quando aplicável","Seguro de saúde ou comprovativo de cobertura pelo SNS","Comprovativo de alojamento (ver separador Alojamento)","Comprovativo de parentesco, quando se justifique"]}],n:NOTE,u:["DECO PROteste",DG]},
+ {t:"Renovação",p:"A renovação deve ser pedida até 30 dias antes de a AR expirar. Só pode renovar quem tem título válido ou caducado há menos de 6 meses. O pedido faz-se no Portal das Renovações da AIMA, disponível para títulos que terminam entre 1 de julho de 2025 e 31 de dezembro de 2026.",
+  b:[{h:"Documentos para renovar",l:["Título de residência","Passaporte ou documento de viagem válido","Autorização para consulta do registo criminal português (exceto menores de 16 anos)","Meios de subsistência: contrato de trabalho, declaração de IRS, recibos de vencimento ou recibos verdes","Comprovativo de alojamento: contrato de arrendamento e último recibo de renda, ou contrato de compra e venda","Comprovativo de inexistência de dívidas às Finanças e à Segurança Social"]},{h:"Antes de começares",l:["Tem NISS: a AIMA exige-o para concluir a renovação","Confirma que a tua morada está atualizada na AIMA"]}],n:NOTE,u:["Portal das Renovações","https://portal-renovacoes.aima.gov.pt"]},
+ {t:"Estudantes",p:"Para estudo, investigação, estágio, voluntariado ou mobilidade de estudantes do ensino superior. A AIMA aplica a lista geral e pode acrescentar documentos conforme o visto.",
+  b:[{h:"Normalmente pedido",l:["Passaporte válido e visto de estudo","Comprovativo de matrícula ou inscrição na instituição de ensino","Meios de subsistência: bolsa, apoio da família ou extratos bancários","Seguro de saúde ou comprovativo de cobertura pelo SNS","Comprovativo de alojamento (contrato de arrendamento ou declaração)","NIF e NISS, quando aplicável"]}],n:"A lista de documentos específicos para estudantes depende do tipo de visto. Confirma com a tua instituição de ensino e no portal da AIMA.",u:["DECO PROteste",DG]},
+ {t:"Trabalhadores",p:"Para quem trabalha por conta de outrem ou por conta própria. O contrato de trabalho e os recibos são a prova de que tens meios para viver em Portugal.",
+  b:[{h:"Trabalhador com contrato",l:["Passaporte e visto de trabalho ou AR em vigor","Contrato de trabalho","Recibos de vencimento recentes","Declaração de IRS (na renovação)","NIF e NISS","Declaração de não dívida às Finanças e à Segurança Social (na renovação)"]},{h:"Trabalhador independente",l:["Comprovativo de início de atividade nas Finanças","Recibos verdes ou faturas emitidas","Declaração de IRS","Declaração de não dívida"]}],n:NOTE,u:["DECO PROteste",DG]},
+ {t:"Alojamento",p:"A prova de morada é pedida em quase todos os processos. O documento certo depende da tua situação.",
+  b:[{h:"Se arrendas",l:["Contrato de arrendamento e último recibo de renda","Declaração do senhorio com a situação legal do uso do imóvel, se a AIMA pedir","Declaração sob compromisso de honra da morada onde resides"]},{h:"Se és proprietário ou usufrutuário",l:["Certidão de registo predial ou código de acesso à certidão","Contrato de compra e venda do imóvel"]},{h:"Se vives em casa de outra pessoa",l:["Declaração da entidade alojadora com a situação jurídica do uso do imóvel","Declaração sob compromisso de honra"]}],n:NOTE,u:["DECO PROteste",DG]},
+ {t:"Reagrupamento familiar",p:"As regras ficaram mais exigentes com as alterações à lei de estrangeiros em vigor, incluindo a Lei n.º 62/2026, de 10 de setembro.",
+  b:[{h:"Quem pode pedir",l:["Titular de AR válida há pelo menos 2 anos","15 meses se for o cônjuge que coabitou com o requerente durante pelo menos 18 meses antes da entrada em Portugal"]},{h:"Depois da concessão",l:["Formação em língua portuguesa","Formação sobre princípios e valores constitucionais portugueses","Ensino obrigatório para menores"]}],n:"A renovação da AR por reagrupamento passa a depender de provar que cumpriste estas medidas de integração.",u:["DECO PROteste",DG]}
+]},
+{id:"niss",e:"🏛️",t:"NISS (Segurança Social)",s:[
+ {t:"Como tratar",p:"O NISS permite aceder a direitos e apoios e cumprir as contribuições. O pedido é gratuito e faz-se online no portal da Segurança Social. Sem prazo fixo de atribuição.",
+  b:[{h:"Pessoas de países terceiros: todos estes documentos",l:["Passaporte","Visto de trabalho","Autorização de residência (temporária ou permanente) ou outro documento de identificação do país de origem"]},{h:"Comprovativo da situação de trabalho (um destes)",l:["Contrato de trabalho","Início de atividade independente e recibos ou faturas","Certidão de registo da sociedade ou certidão permanente comercial","Comprovativo de enquadramento no Seguro Social Voluntário"]},{h:"Comprovativo do pedido de residência (um destes)",l:["Comprovativo do pedido de autorização de residência","Comprovativo do pedido de visto de residência CPLP"]},{h:"Como pedir",l:["Preenche o formulário “Pedido de NISS – Cidadão Estrangeiro” e anexa os documentos","Recebes uma carta com indicação para levantar o número num serviço de atendimento (marca no SIGA)","O empregador também pode pedir o NISS por ti, com procuração ou declaração PA-12"]}],n:"Quem tem morada em Portugal pode pedir de uma só vez o NIF, o NISS e o número de utente.",u:["gov.pt",GN]}
+]},
+{id:"utente",e:"🏥",t:"Número de utente (SNS)",s:[
+ {t:"Como tratar",p:"O número de utente é atribuído na primeira vez que vais a um centro de saúde ou hospital público. Podes pedi-lo mesmo sem precisares de cuidados. Atenção: ter o número não garante que o SNS cobre as despesas.",
+  b:[{h:"Documentos habituais",l:["Autorização de residência válida (ou comprovativo do pedido)","Documento de identificação","NIF","Comprovativo de morada, se não constar do título","Telefone e email de contacto","NISS, normalmente não obrigatório"]},{h:"Dicas",l:["Vai ao centro de saúde da tua zona de residência","Inscrição no centro de saúde não é o mesmo que ter médico de família","Para dúvidas de saúde, liga para o SNS 24: 808 24 24 24"]}],n:"Os centros de saúde podem pedir documentos ligeiramente diferentes conforme a zona. Liga antes para confirmar.",u:["gov.pt","https://www.gov.pt/servicos/pedir-o-numero-de-utente-do-sns"]}
+]},
+{id:"banco",e:"🏦",t:"Abrir conta bancária",s:[
+ {t:"Como tratar",p:"Quase todos os bancos pedem o NIF antes de abrir a conta. Os requisitos variam de banco para banco, por isso pergunta antes que documentos aceitam.",
+  b:[{h:"Documentos mais pedidos",l:["Passaporte ou documento de identificação válido","Autorização de residência, para estrangeiros residentes","NIF","Comprovativo de morada: contrato de arrendamento, conta de luz, água ou internet, ou extrato bancário","Comprovativo de profissão e entidade patronal (contrato de trabalho ou recibos)"]},{h:"Se ainda não estás em Portugal",l:["Contas abertas à distância costumam exigir cópias certificadas dos documentos","Comprovativo de morada no país de origem, normalmente com menos de 90 dias"]}],n:"Os requisitos mudam entre bancos e conforme o teu estatuto. Confirma no balcão ou no site do banco.",u:["Exemplo: Caixa Geral de Depósitos","https://www.cgd.pt/Particulares/Contas/Contas-a-Ordem/Documents/Abertura-Conta.pdf"]}
+]},
+{id:"nac",e:"🇵🇹",t:"Nacionalidade portuguesa",s:[
+ {t:"Naturalização",p:"A nova Lei Orgânica n.º 1/2026 está em vigor desde 19 de maio de 2026. Os pedidos já entregues antes dessa data seguem as regras anteriores.",
+  b:[{h:"Tempo de residência legal",l:["7 anos para cidadãos de países de língua portuguesa: Brasil, Angola, Cabo Verde, Guiné-Bissau, Moçambique e São Tomé e Príncipe","10 anos para os restantes países, como Índia, Bangladesh e Nepal","Alguns resumos indicam que a contagem começa na emissão do título de residência: confirma o teu caso com um advogado"]},{h:"Outros requisitos",l:["Ser maior de idade","Não ter sido condenado a pena de prisão igual ou superior a 3 anos","Provar conhecimento da língua portuguesa","Provar integração e ligação à comunidade, incluindo prova sobre cultura e história de Portugal"]},{h:"Documentos geralmente pedidos",l:["Passaporte e título de residência","Certidão de nascimento (legalizada e traduzida, se necessário)","Certificado de registo criminal português e do país de origem","Comprovativo de língua portuguesa","Comprovativo do pagamento da taxa (cerca de 250 € em abril de 2026)"]}],n:"A lei é recente e a lista de documentos pode mudar. Antes de pedires, confirma no Diário da República e no IRN, e fala com um advogado.",u:["Lei Orgânica 1/2026","https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996"]}
+]},
+{id:"nif",e:"🔢",t:"NIF (número fiscal)",s:[
+ {t:"Como tratar",p:"O NIF permite trabalhar, abrir conta bancária e cumprir obrigações fiscais. O pedido é gratuito.",
+  b:[{h:"Residente em Portugal",l:["Documento de identificação do país de origem ou passaporte","Título de residência","Se usares o passaporte, leva também o visto de entrada em Portugal ou no espaço Schengen"]},{h:"Não residente",l:["Documento de identificação ou passaporte","Representante fiscal com residência em Portugal"]},{h:"Criança sem passaporte",l:["Documento que comprove o nascimento"]},{h:"Como pedir",l:["Nos serviços das Finanças, com marcação de atendimento pelo telefone 217 206 707","O representante pode pedir no e-balcão do Portal das Finanças, se a pessoa residir fora da UE","Quem tem morada em Portugal pode pedir NIF, NISS e número de utente de uma só vez"]}],n:NOTE,u:["gov.pt",GN]}
+]}];
+
+var L="pt",gT=0,gS=0;
+function setL(l){L=l;document.documentElement.lang=l;
+document.querySelectorAll("[data-i]").forEach(function(e){e.innerHTML=D[l][e.dataset.i]});
+document.getElementById("bpt").className=l=="pt"?"on":"";document.getElementById("ben").className=l=="en"?"on":"";
+try{localStorage.setItem("vl",l)}catch(e){}}
+function esc(s){return s}
+function go(v,t,s){
+ document.getElementById("home").hidden=(v!="home");document.getElementById("guia").hidden=(v!="guia");
+ if(v=="guia"){gT=t||0;gS=s||0;draw()}
+ window.scrollTo(0,0);
+}
+function draw(){
+ var T=G[gT],S=T.s[gS];
+ var tt=document.getElementById("tt");tt.innerHTML="";
+ G.forEach(function(x,i){var b=document.createElement("button");b.className="tab"+(i==gT?" on":"");b.textContent=x.e+" "+x.t;b.onclick=function(){go("guia",i,0)};tt.appendChild(b)});
+ var st=document.getElementById("st");st.innerHTML="";
+ if(T.s.length>1)T.s.forEach(function(x,i){var b=document.createElement("button");b.className="tab s"+(i==gS?" on":"");b.textContent=x.t;b.onclick=function(){gS=i;draw()};st.appendChild(b)});
+ var h="<h2>"+T.e+" "+T.t+(T.s.length>1?" · "+S.t:"")+"</h2><p>"+S.p+"</p>";
+ S.b.forEach(function(b){h+="<h3>"+b.h+"</h3><ul>"+b.l.map(function(i){return"<li>"+i+"</li>"}).join("")+"</ul>"});
+ h+="<div class=\"nt\">⚠️ "+S.n+"</div>";
+ h+="<p class=\"src\">Fonte: <a href=\""+S.u[1]+"\" target=\"_blank\" rel=\"noopener\">"+S.u[0]+"</a> · Informação a outubro de 2026. Não é aconselhamento jurídico.</p>";
+ h+="<div class=\"cta2\"><b>Queres que a VERIFY confirme se o teu dossiê está completo?</b><a class=\"btn\" href=\""+FORM+"\" target=\"_blank\" rel=\"noopener\">Entrar na lista de espera</a></div>";
+ document.getElementById("gc").innerHTML=h;
+}
+var tg=document.getElementById("tg");
+G.forEach(function(x,i){var b=document.createElement("button");b.className="box tc";b.innerHTML="<div class=\"e\">"+x.e+"</div><h3>"+x.t+"</h3><p>"+x.s[0].p.split(". ")[0]+".</p>";b.onclick=function(){go("guia",i,0)};tg.appendChild(b)});
+var s=null;try{s=localStorage.getItem("vl")}catch(e){}
+setL(s||((navigator.language||"pt").toLowerCase().indexOf("pt")==0?"pt":"en"));
+if(location.hash=="#guia")go("guia",0,0);
+</script>
+</body>
+</html>
